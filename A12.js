@@ -510,14 +510,14 @@ let jokes=[
         }
     ]
 
-var completedJokes=[]
+var completedJokes=[];
 function randomNumberGenerator(){
     let randomNumber =Math.round(Math.random()*jokes.length-1);
-    jokeGenerator(randomNumber)
+    jokeGenerator(randomNumber);
 }
 function jokeGenerator(randomNumber){
     if(completedJokes.length===30){
-        completedJokes=[]
+        completedJokes=[];
     }
     if(completedJokes.includes(randomNumber)  || randomNumber<0){
         randomNumberGenerator();
@@ -532,8 +532,11 @@ function jokeGenerator(randomNumber){
 function jokeDisplayer(part1,part2){
     let setupDisplay=document.querySelector('.setup');
     let deliveryDisplay = document.querySelector('.delivery'); 
-        setupDisplay.innerHTML=`<h2>${part1}</h2>`
-        deliveryDisplay.innerHTML=`<h2>${part2}</h2>`
+        setupDisplay.innerHTML=`<h2>${part1}</h2>`;
+        deliveryDisplay.innerHTML=``;
+        setupDisplay.addEventListener('click',()=>{
+            deliveryDisplay.innerHTML=`<h2>${part2}</h2>`;
+        });
 }
 let jokeGeneratorButton=document.querySelector(".getNewJoke");
-jokeGeneratorButton.addEventListener('click',randomNumberGenerator)
+jokeGeneratorButton.addEventListener('click',randomNumberGenerator);
