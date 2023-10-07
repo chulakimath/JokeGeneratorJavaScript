@@ -23,6 +23,7 @@
         }
 
         .getNewJoke{
+            cursor: pointer;
             background-color: gray;
             border: none;
             border-radius: 5px;
@@ -33,8 +34,31 @@
             box-shadow: 5px 5px 10px pink;
             transition: all 0.5s ease-in-out;
         }
+     
+        .setup{
+            cursor: pointer;
+        }
+      
+
+        @keyframes breathing2 {
+            0%{
+                background-color: antiquewhite;
+            }
+            25%{
+                background-color: pink;
+            }
+            50%{
+                background-color: papayawhip;
+            }
+            75%{
+                background-color: pink;
+            }
+            100%{
+                background-color:antiquewhite;
+            }
+        }
         .getNewJoke:hover{
-            background-color: antiquewhite;
+            animation: breathing2 2s infinite;
             color: black;
             border-color: black;
             transform: scale(1.1);
@@ -45,12 +69,14 @@
             border-radius: 5px;
             text-align: justify;
             justify-content: center;
+            animation: breathing2 3s infinite;
         }
         .delivery>h2{
             background-color: antiquewhite;
             padding: 1vh;
             border-radius: 5px;
         }
+       
 
      
     </style>
@@ -61,7 +87,7 @@
         <h1>Goke for you seriously it's not a Joke</h1>
     </div>
     <div class="setup">
-
+        <!-- <h2>hh</h2> -->
     </div>
     <div class="delivery">
         
@@ -73,7 +99,8 @@
         </button>
     </div>
 
-    <script src="A12.js"></script>
+    <!-- <script src="A12.js"></script> -->
+    <script src="A12_json_test.js"></script>
 </body>
 
 </html>
